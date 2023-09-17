@@ -1,0 +1,100 @@
+:root {
+  font-size: 62.5%;
+
+  --primary-clr: hsla(204, 52%, 24%, 1);
+  --secondary-clr: hsla(349, 51%, 66%, 1);
+  --primary-light-clr: hsla(206, 38%, 33%, 1);
+  --secondary-dark-clr: hsla(346, 40%, 55%, 1);
+}
+
+body {
+  position: relative;
+}
+
+body::before {
+  content: "";
+  background-image: url(assets/clouds.png);
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: -1;
+}
+
+header {
+  width: fit-content;
+  margin: 0 auto;
+  opacity: 93%;
+}
+
+header h1 {
+  padding: 1.5rem;
+  border: black 5px solid;
+  border-image: linear-gradient(
+      to bottom left,
+      black 0%,
+      hsla(346, 51%, 51%, 0.5) 50%,
+      black 100%
+    )
+    1;
+  font-size: 5em;
+}
+
+.input-container {
+  text-align: center;
+  margin: 0 auto;
+}
+
+.todoInput {
+  background-color: hsla(346, 40%, 55%, 20%);
+  font-size: large;
+}
+.todoInput::placeholder {
+  color: hsla(0, 0%, 0%, 80%);
+  font-size: medium;
+}
+.addTodoBtn {
+  background-color: hsla(346, 40%, 55%, 20%);
+}
+
+.task-lists {
+  display: flex;
+  justify-content: space-around;
+}
+
+.list {
+  width: 60rem;
+  height: 40rem;
+}
+
+.to-do-box {
+  background-color: hsla(346, 40%, 55%, 40%);
+}
+
+.completed-box {
+  background-color: hsla(204, 52%, 24%, 50%);
+}
+
+.list-title {
+  margin: 3rem;
+  font-size: 3em;
+}
+
+.to-do-list li,
+.completed-list li {
+  font-size: large;
+  display: inline;
+}
+
+.to-do-list ul,
+.completed-list ul {
+  display: flex;
+}
+
+.to-do-list button,
+.completed-list button {
+  width: 1em;
+  height: 1em;
+  margin-left: 3em;
+}
